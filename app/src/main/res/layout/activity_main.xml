@@ -23,13 +23,13 @@
         android:layout_centerHorizontal="true"/>
 
     <ImageView
+        android:id="@+id/logoImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/logoImage"
-        android:contentDescription="@string/imageview_desc"
-        android:src="@drawable/bitcoin_image"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/imageview_desc"
+        android:src="@drawable/bitcoin_image" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -38,28 +38,29 @@
         android:layout_below="@+id/priceLabel"
         android:gravity="center_vertical|center_horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/base"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:id="@+id/textView"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-
         <Spinner
+            android:id="@+id/currency_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/currency_spinner"
-            android:gravity="center_horizontal"
-            android:spinnerMode="dropdown"
             android:dropDownSelector="@color/fontColour"
-            />
+            android:gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
 
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/priceLabel"
+        android:layout_alignRight="@+id/priceLabel"
+        android:layout_below="@+id/priceLabel"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="98dp"
+        android:text="@string/base"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
